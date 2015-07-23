@@ -21,4 +21,26 @@ public class Rover {
         }
         return compass[(facingTowards + 1) % 4];
     }
+
+    public boolean move() {
+        if(facingTowards == 0) {
+            x -= 1;
+            return true;
+        }
+        else if (facingTowards == 1) {
+            y += 1;
+            return true;
+        }
+        else if (facingTowards == 2) {
+            x += 1;
+            return true;
+        }
+        else if (facingTowards == 3) {
+            y -= 1;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
