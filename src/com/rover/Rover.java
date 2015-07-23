@@ -43,4 +43,8 @@ public class Rover {
             return false;
         }
     }
+
+    public String position() {
+        return (x + " " + y + " " + compass[facingTowards]);
+    }
 }

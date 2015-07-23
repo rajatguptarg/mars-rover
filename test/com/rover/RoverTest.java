@@ -20,4 +20,12 @@ public class RoverTest {
 
         assertEquals(true, rover.move());
     }
+
+    @Test
+    public void roverShouldTellItsPosition() throws Exception {
+        Rover rover = new Rover(1, 1, 1);
+
+        assertEquals("1 1 N", rover.position());
+
+    }
 }
