@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="Money" default="runjunit" basedir=".">
+<project name="mars-rover" default="runjunit" basedir=".">
 
     <property name="lib.dir" value="lib"/>
 
@@ -15,7 +15,7 @@
 
     <target name="runjunit" depends="compile" >
         <junit haltonfailure="true" printsummary="true" showoutput="yes" >
-            <test name="com.money.MoneyTest" />
+            <test name="com.rover.RoverTest" />
             <classpath>
                 <pathelement location="out" />
                 <path refid="classpath" />
