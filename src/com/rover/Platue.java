@@ -1,5 +1,6 @@
 package com.rover;
 
+
 public class Platue {
     private int boundaryX;
     private int boundaryY;
@@ -10,7 +11,10 @@ public class Platue {
     }
 
     public boolean isPresent(Rover rover) {
-        if (((int) rover.position().charAt(0) > boundaryX) || ((int) rover.position().charAt(2) > boundaryY)) {
+        int roverXPosition = Character.getNumericValue(rover.position().charAt(0));
+        int roverYPosition = Character.getNumericValue(rover.position().charAt(2));
+
+        if ((roverXPosition > boundaryX) || (roverYPosition > boundaryY)) {
             return false;
         }
         return true;
