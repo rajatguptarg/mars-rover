@@ -16,10 +16,13 @@
     <target name="runjunit" depends="compile" >
         <junit haltonfailure="true" printsummary="true" showoutput="yes" >
             <test name="com.rover.RoverTest" />
+            <test name="com.rover.DriverTest" />
+            <!--<test name="com.rover.PlatueTest" />-->
             <classpath>
                 <pathelement location="out" />
                 <path refid="classpath" />
             </classpath>
+            <formatter type="plain" usefile="false"/>
         </junit>
     </target>
 
